@@ -9,14 +9,6 @@
             </h4>
         </div>
     </div>
-    <div class="">
-        <div class="fl">
-
-        </div>
-        <div class="fr">
-
-        </div>
-    </div>
   </div>
 </template>
 

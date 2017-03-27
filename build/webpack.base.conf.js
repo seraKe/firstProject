@@ -23,6 +23,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      sidebar: path.join(__dirname, '../src/components/sidebar.vue')
     }
   },
   module: {
