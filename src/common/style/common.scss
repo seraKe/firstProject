@@ -1,0 +1,31 @@
+html, body, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: normal;
+}
+ul,li,ol,dl,dt,dd{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#2c3e50;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
