@@ -9,7 +9,8 @@ export default {
   name: 'table',
   data () {
     return {
-      msg: 'table'
+      msg: 'table',
+      title:'测试'
     }
   }
 }
