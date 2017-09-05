@@ -23,8 +23,8 @@
 export default {
   name: 'app',
   methods: {
-    bodyScroll: function (e) {
-      console.log(e)
+    bodyScroll: function () {
+      console.log(111)
     }
   }
 }

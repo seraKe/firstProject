@@ -4,7 +4,7 @@
           <li class="menu_li" v-for="item in list">
               <a href="javascript:void(0)">{{item.title}}</a>
               <ul class="menu-sub">
-                  <li v-for="li in item.items" v-bind:class="{highLight:li.active}">{{li.name}}</li>
+                  <li v-for="(li,index) in item.items" v-bind:class="{highLight:li.active}" v-on:click="showContent(index)">{{li.name}}</li>
               </ul>
           </li>
       </ul>
@@ -50,13 +50,10 @@ export default {
   watch: {
     scrollTop (value) {
       var self = this
-    //   console.log(value)
-    //   console.log(this.HeightArr)
       let HeightArrLen = this.HeightArr.length
       for (var j = HeightArrLen - 1; j >= 0; j--) {
         var cur = self.HeightArr[j]
         if (value > (cur - 120)) {
-        //   console.log(value, cur, j)
           self.changeColor(j)
           break
         }
@@ -82,15 +79,18 @@ export default {
   },
   methods: {
     changeColor (index) {
-      var self = this
+    //   var self = this
       this.list[this.profilesIndex].items.forEach(function (cur, i) {
         if (i === index) {
           cur.active = 1
         } else {
           cur.active = 0
         }
-        console.log(self.list[0].items)
       })
+    },
+    showContent (i) {
+      var height = this.HeightArr[i]
+      console.log(height)
     }
   }
 }
@@ -120,7 +120,6 @@ export default {
     .menu-sub{
         padding-top: 15px;
         li{
-            // color:#7d8691;
             color:#f2fafb;
             font-size:16px;
             padding-left: 10px;
